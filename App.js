@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
+import Header from './components/Header';
 
 const App = () => {
   return (
     // flex on react is set by columns.  Flex in CSS is typically set by rows when working out React Native
     <View style={styles.container}>
+      <Header />
       <Text style={styles.h1}>Hello World</Text>
       <Text style={styles.text}>Hello World</Text>
       <Text style={styles.text}>Hello World</Text>
