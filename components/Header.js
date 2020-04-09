@@ -9,4 +9,8 @@ function Header({title}) {
   );
 }
 
+Header.defaultProps = {
+  title: 'The ultimate task list',
+};
+
 export default Header;
