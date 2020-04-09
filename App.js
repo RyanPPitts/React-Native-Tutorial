@@ -6,7 +6,7 @@ const App = () => {
   return (
     // flex on react is set by columns.  Flex in CSS is typically set by rows when working out React Native
     <View style={styles.container}>
-      <Header />
+      <Header title="List of Tasks" />
       <Text style={styles.h1}>Hello World</Text>
       <Text style={styles.text}>Hello World</Text>
       <Text style={styles.text}>Hello World</Text>
