@@ -1,26 +1,26 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, FlatList, Alert} from 'react-native';
-import {uuid} from 'uuidv4';
+import {View, Text, StyleSheet, Image, FlatList} from 'react-native';
 import Header from './components/Header';
+import ListItem from './components/ListItem';
 
 // state represents the parts of the app that can change or are dynamic.
 // functional component with hooks - useState hook
 const App = () => {
   const [items, setItems] = useState([
     {
-      id: uuid(),
+      id: 1,
       text: '1 Hour React Tutorial',
     },
     {
-      id: uuid(),
+      id: 2,
       text: '1 hour reading Coding Bible',
     },
     {
-      id: uuid(),
+      id: 3,
       text: '3 Mile Jog',
     },
     {
-      id: uuid(),
+      id: 4,
       text: 'Offerup Reselling',
     },
   ]);
@@ -29,7 +29,10 @@ const App = () => {
     // flex on react is set by columns.  Flex in CSS is typically set by rows when working out React Native
     <View style={styles.container}>
       <Header title="List of Tasks" />
-      <FlatList />
+      <FlatList
+        data={items}
+        renderItem={({item}) => <ListItem item={item} />}
+      />
       <Text style={styles.h1}>Hello World</Text>
       <Text style={styles.text}>Here is the text line 1</Text>
       <Text style={styles.text}>Here is line 2</Text>
